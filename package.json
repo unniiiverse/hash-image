@@ -1,0 +1,51 @@
+{
+  "name": "hash-image",
+  "version": "1.0.3",
+  "type": "module",
+  "main": "dist/index.umd.js",
+  "module": "dist/index.d.ts",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist/**/*.*"
+  ],
+  "keywords": [
+    "blurhash image",
+    "react blurhash",
+    "blurred image",
+    "image skeleton"
+  ],
+  "author": "unniiiverse<unniiiverse.github.io>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/unniiiverse/hash-image.git"
+  },
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-blurhash": "^0.3.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "@types/react": "^18.0.28",
+    "@types/react-dom": "^18.0.11",
+    "@typescript-eslint/eslint-plugin": "^5.57.1",
+    "@typescript-eslint/parser": "^5.57.1",
+    "@vitejs/plugin-react-swc": "^3.0.0",
+    "autoprefixer": "^10.4.16",
+    "eslint": "^8.38.0",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "eslint-plugin-react-refresh": "^0.3.4",
+    "postcss": "^8.4.31",
+    "react-router-dom": "^6.21.2",
+    "sass": "^1.69.5",
+    "tailwindcss": "^3.3.5",
+    "typescript": "^5.0.2",
+    "vite": "^4.3.2",
+    "vite-plugin-dts": "^3.7.0"
+  }
+}
