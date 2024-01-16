@@ -9,7 +9,7 @@
   opacity: 0;
   visibility: hidden;
   z-index: 3;
-  width: auto;
+  width: 100%;
   height: 100%;
 
   &--loaded {
@@ -22,6 +22,7 @@
     position: relative;
     width: fit-content;
     height: 100%;
+    width: 100%;
   }
 
   &-placeholder {
