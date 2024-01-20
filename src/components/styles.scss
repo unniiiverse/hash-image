@@ -3,6 +3,7 @@
     display: block;
     position: relative;
     z-index: 2;
+    flex-shrink: 0;
   }
 
   transition: .2s ease-in-out;
