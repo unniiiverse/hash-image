@@ -2,7 +2,6 @@ import React, { useState, useEffect, useRef } from "react";
 import { Blurhash } from 'react-blurhash';
 
 import './styles.scss';
-import { generateID } from "./handlers";
 
 export interface HashImageProps extends React.DetailedHTMLProps<React.ImgHTMLAttributes<HTMLImageElement>, HTMLImageElement> {
   src: string,
@@ -19,7 +18,6 @@ export interface HashImageProps extends React.DetailedHTMLProps<React.ImgHTMLAtt
 export const HashImage: React.FC<HashImageProps> = ({ src, alt, loading, initialHash, width, height, className, parentClassName, fill, ...props }) => {
   const [hash] = useState(initialHash || 'LRQ0XHWB?b%M~qofIURjWBt7j[M{');
   const [pictureLoaded, setPictureLoaded] = useState(false);
-  const [id] = useState(generateID())
   const ref = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -35,7 +33,7 @@ export const HashImage: React.FC<HashImageProps> = ({ src, alt, loading, initial
       const image = ref.current.querySelector('img')!;
 
       image.classList.add('hash-image--loaded');
-      ref.current.querySelector(`#hash-${id}`)!.classList.add('hash-image-placeholder--loaded')
+      ref.current.querySelector(`.hash-image-placeholder`)!.classList.add('hash-image-placeholder--loaded');
     }
   }, [ref, pictureLoaded]);
 
@@ -48,7 +46,7 @@ export const HashImage: React.FC<HashImageProps> = ({ src, alt, loading, initial
   return (
     <div className={`hash-image-parent ${parentClassName ? parentClassName : ''}`} ref={ref} style={{ width: width || 'auto', height: height || 'auto' }}>
       <picture className="hash-image-picture">
-        <Blurhash hash={hash} width={width || '100%'} height={height || '100%'} className="hash-image-placeholder" id={`hash-${id}`} />
+        <Blurhash hash={hash} width={width || '100%'} height={height || '100%'} className="hash-image-placeholder" />
         <img src={src} alt={alt} loading={loading || 'lazy'} {...props} className={`hash-image ${className ? className : ''}`} onLoad={() => setPictureLoaded(true)} />
       </picture>
     </div>
