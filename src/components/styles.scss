@@ -30,5 +30,10 @@
     position: absolute !important;
     top: 0;
     left: 0;
+
+    &--loaded {
+      opacity: 0;
+      visibility: hidden;
+    }
   }
 }

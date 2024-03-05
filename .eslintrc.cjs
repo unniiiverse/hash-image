@@ -9,7 +9,18 @@ module.exports = {
   parserOptions: { ecmaVersion: 'latest', sourceType: 'module' },
   plugins: ['react-refresh'],
   rules: {
-    'react-refresh/only-export-components': 'warn',
-    'no-unused-vars': 0
-  },
+    indent: ["error", 2],
+    "no-unused-vars": ["off", {
+      vars: "all",
+      args: "after-used",
+      ignoreRestSiblings: false
+    }],
+    semi: ["warn", "always"],
+    "prefer-const": "off",
+    "@typescript-eslint/ban-ts-comment": "off",
+    "@typescript-eslint/no-non-null-assertion": "off",
+    "@typescript-eslint/no-unused-vars": "off",
+    "@typescript-eslint/no-empty-function": "warn",
+    "no-empty": "warn"
+  }
 }

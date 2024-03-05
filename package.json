@@ -1,6 +1,6 @@
 {
   "name": "hash-image",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "type": "module",
   "main": "dist/index.umd.js",
   "module": "dist/index.es.js",
@@ -21,7 +21,7 @@
     "url": "https://github.com/unniiiverse/hash-image.git"
   },
   "scripts": {
-    "dev": "vite",
+    "dev": "eslint . --fix --ext .ts,.tsx && vite",
     "build": "tsc && vite build",
     "preview": "vite preview"
   },
