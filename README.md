@@ -1,3 +1,5 @@
+🛑 DEPRECATED: No longer supported 🛑
+
 # Hash-image
 
 ![Hash image banner](./banner.png)
